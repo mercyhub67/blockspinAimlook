@@ -484,7 +484,7 @@ local DesyncButton = MainTab:Button({
     Locked = false,
     Callback = function()
         Net.send("request_respawn")
-        task.wait(2)
+        task.wait(3.5)
         Net.get("death_screen_request_respawn")
         setfflag("NextGenReplicatorEnabledWrite4", "true")
 
