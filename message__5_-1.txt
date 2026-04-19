@@ -16,7 +16,7 @@ pcall(
         -- Hook transition() - ข้าม animation หมด
         local old_transition = TransitionModule.transition
         TransitionModule.transition = function(p_in, p_wait, p_out, noLogo)
-            task.wait(0.5) -- รอให้ระบบเตรียมตัวเสร็จก่อน
+            task.wait(5) -- รอให้ระบบเตรียมตัวเสร็จก่อน
             return old_transition(0, 0, 0, true) -- ข้าม animation หมด
         end
     end
